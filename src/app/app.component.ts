@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PlacesService } from './places.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'thisdot-tutorial';
+
+  constructor(private placesService: PlacesService) {}
+  places$ = this.placesService.places$;
 }
